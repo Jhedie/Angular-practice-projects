@@ -1,1 +1,36 @@
-{{ title }}
+<div class="toolbar-content">
+  <div class="toolbar">
+    <div class="rxjs-image">
+      <img src="assets/images/pngegg.png" alt="RxJS Logo">
+    </div>
+    <div class="title">{{ title }}</div>
+  </div>
+  <div class="content">
+    <div class="buttons-container">
+      <button class=" btn btn-primary" [disabled]=!!subscription (click)="startStream()">
+        Start Stream
+      </button>
+      <button class=" btn btn-dark" [disabled]=!subscription (click)="stopStream()">
+        Stop Stream
+      </button>
+    </div>
+    <div class="streams">
+      <div class="input-stream-box">
+        <div class="stream-title">Input Stream</div>
+        <div class="stream-content" *ngFor="let item of bookStreamData">
+          {{item}}
+        </div>
+        <hr>
+        <div class="stream-content" *ngFor="let item of moviesStreamData">
+          {{item}}
+        </div>
+      </div>
+      <div class="output-stream-box">
+        <div class="stream-title">Output Stream</div>
+        <div class="stream-content" *ngFor="let item of outputStreamData">
+          {{item}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

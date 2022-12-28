@@ -1,0 +1,55 @@
+.toolbar-content {
+  .toolbar {
+    display: flex;
+    align-items: center;
+    background-color: #d8e2dc;
+    height: 100%;
+    padding: 1rem;
+    .rxjs-image {
+      img {
+        width: 3rem;
+        height: 3rem;
+        margin-left: 1rem;
+      }
+    }
+    .title {
+      margin-left: 1rem;
+      font-size: larger;
+      font-weight: bolder;
+      color: #9d8189;
+    }
+  }
+  .content {
+    .buttons-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+
+      button:nth-child(1) {
+        margin-right: 1rem;
+        background-color: rgb(18, 17, 17) !important;
+      }
+    }
+    .streams {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      .input-stream-box,
+      .output-stream-box {
+        height: 20rem;
+        width: 20rem;
+        padding: 1.5rem;
+        overflow: scroll;
+        color: #d8e2dc;
+        border-radius: 1rem;
+        background-color: rgb(18, 17, 17);
+      }
+      .output-stream-box {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+hr {
+  border-top: 1px solid rgb(62, 41, 41);
+}
