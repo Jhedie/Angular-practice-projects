@@ -1,4 +1,12 @@
-# RxjsOperatorsInstanceMethods
+# Rxjs Operators Instance Methods
+
+RxJS instance methods are functions that are available on observable objects in the RxJS library.
+Observables are objects that represent a stream of values or events over time, and they have a number of instance methods that can be used to manipulate and work with those streams. 
+Some examples of instance methods are: 
+* Subscribe
+* pipe
+* map
+* filter
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
 
