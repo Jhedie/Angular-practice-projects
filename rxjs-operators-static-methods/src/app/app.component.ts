@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { interval, map, tap } from 'rxjs';
+import { interval, map, merge, partition, tap } from 'rxjs';
 
 interface streamData {
   type: string;
@@ -14,6 +14,9 @@ export class AppComponent {
   title = 'Working with RxJs operators using static methods';
   subscription: any;
   outputStream: streamData[] = [];
+  birds: string[] = [];
+  countries: string[] = [];
+
   combinedStreamData: streamData[] = [
     {
       type: 'country',
@@ -42,15 +45,22 @@ export class AppComponent {
   ];
 
   startStream() {
-    const streamSource = interval(3000).pipe(
+    const streamSource = interval(2000).pipe(
       map((input) => {
         const index = input % this.combinedStreamData.length;
         return this.combinedStreamData[index];
       })
     );
-    this.subscription = streamSource
-      .pipe(tap((value) => this.outputStream.push(value)))
-      .subscribe();
+    const [birdsStream, countriesStream] = partition(
+      streamSource,
+      (item) => item.type === 'bird'
+    );
+    this.subscription = merge(
+      countriesStream.pipe(
+        tap((country) => this.countries.push(country.title))
+      ),
+      birdsStream.pipe(tap((bird) => this.birds.push(bird.title)))
+    ).subscribe();
   }
   stopStream() {
     this.subscription.unsubscribe();
