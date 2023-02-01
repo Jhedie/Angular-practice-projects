@@ -16,21 +16,22 @@
     </div>
     <div class="streams">
       <div class="input-stream-box">
-        <div class="stream-title">Input Stream</div>
-        <div class="stream-content">
+        <div class="stream-title">Combined Stream</div>
+        <div class="stream-content" *ngFor="let item of combinedStreamData">
+          Title: {{ item.title }}, Type: {{item.type}}
         </div>
-        <hr>
-        <div class="stream-content">
+
+      </div>
+      <div class="output-stream-box">
+        <div class="stream-title">Birds</div>
+        <div class="stream-content" *ngFor="let item of outputStream">
+          Title: {{ item.title }}
         </div>
       </div>
       <div class="output-stream-box">
-        <div class="stream-title">Output Stream</div>
-        <div class="stream-content">
-        </div>
-      </div>
-      <div class="output-stream-box">
-        <div class="stream-title">Output Stream</div>
-        <div class="stream-content">
+        <div class="stream-title">Countries</div>
+        <div class="stream-content" *ngFor="let item of outputStream">
+          Title: {{ item.title }}
         </div>
       </div>
     </div>
