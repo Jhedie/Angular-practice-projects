@@ -1,0 +1,21 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import "~bootstrap/scss/bootstrap.scss";
+
+header {
+  .title-bell-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2b3a55;
+    padding: 1rem;
+    color: rgb(160, 196, 197);
+  }
+}
+
+.notification-manager {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+  justify-content: center;
+}
