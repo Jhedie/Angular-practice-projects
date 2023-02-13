@@ -1,0 +1,27 @@
+<div class="notification-count-display">
+  <span class="notification-title">Notifications: </span>
+  <span class="count">{{ count }}</span>
+</div>
+<div class="control-buttons">
+  <button
+    type="button"
+    class="btn btn-outline-primary btn-lg"
+    (click)="addNotification()"
+  >
+    Add Notification
+  </button>
+  <button
+    type="button"
+    class="btn btn-outline-primary btn-lg"
+    (click)="removeNotification()"
+  >
+    Remove Notification
+  </button>
+  <button
+    type="button"
+    class="btn btn-outline-primary btn-lg"
+    (click)="resetNotification()"
+  >
+    Reset Count
+  </button>
+</div>
