@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { NotificationsService } from '../services/notifications.service';
 
 @Component({
   selector: 'app-notification-bell-component',
@@ -6,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notification-bell-component.component.scss'],
 })
 export class NotificationBellComponentComponent implements OnInit {
-  constructor() {}
+  notificationsCount$!: Observable<number>;
+  constructor(private notificationsService: NotificationsService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.notificationsCount$ = this.notificationsService.count$;
+  }
 }
