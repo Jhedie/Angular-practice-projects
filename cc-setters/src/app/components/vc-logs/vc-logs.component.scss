@@ -4,8 +4,8 @@ h5 {
 .logs {
   padding: 1.8rem;
   background-color: #333;
-  height: 100vh;
-  color: red;
+  min-height: 200px;
   &__item {
+    color: lightgreen;  
   }
 }
