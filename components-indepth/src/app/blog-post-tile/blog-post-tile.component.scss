@@ -1,0 +1,22 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+:host {
+  margin: 0.3rem;
+  background-color: rgb(156, 168, 156);
+  display: block;
+  padding: 1rem;
+}
+
+.read-more-button {
+  background-color: rgb(169, 169, 186);
+}
+
+.likeButton {
+  color: red;
+  font-size: larger;
+  margin-left: 1rem;
+}
+
+.fav {
+  background-color: rgb(216, 188, 188);
+}
