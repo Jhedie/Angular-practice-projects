@@ -1,4 +1,5 @@
 <div class="main-container">
   <h1>Control Value Accessors</h1>
-  <app-ngx-jquery-slider></app-ngx-jquery-slider>
+  <div>sliderValue: {{sliderValue}}</div>
+  <app-ngx-jquery-slider [value]="sliderValue" (valueChange)="onSliderValueChange($event)"></app-ngx-jquery-slider>
 </div>
