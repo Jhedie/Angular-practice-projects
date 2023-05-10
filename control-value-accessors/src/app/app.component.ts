@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'control-value-accessors';
-  sliderValue: any = 50;
+  ctrl: FormControl<any> = new FormControl(50);
 
-  onSliderValueChange($event: any) {
-    console.log('$event', $event);
-    this.sliderValue = $event;
+  updateSlider($event: any) {
+    this.ctrl.setValue($event.currentTarget.value, {
+      emitModelToViewChange: true,
+    });
   }
+
+  title = 'control-value-accessors';
 }
