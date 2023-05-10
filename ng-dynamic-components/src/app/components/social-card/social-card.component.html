@@ -1,0 +1,12 @@
+<!-- The html below currently loads two components. the ngSwitchCase is responsible for changing between the two.
+  -->
+<!--
+<div [ngSwitch]="type">
+  <app-fb-card *ngSwitchCase="cardTypes.Facebook"></app-fb-card>
+  <app-twitter-card *ngSwitchCase="cardTypes.Twitter"></app-twitter-card>
+</div>
+-->
+
+
+<!-- We can use a different approach and load the components dynamically as and when needed -->
+<div class="card-container" #vrf></div>
