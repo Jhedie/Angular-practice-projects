@@ -40,6 +40,4 @@ describe("Hero Component (shallow tests)", () => {
     const de: DebugElement = fixture.debugElement.query(By.css("a"));
     expect(de.nativeElement.textContent).toContain("Batman");
   });
-
-  it("", () => {});
 });
